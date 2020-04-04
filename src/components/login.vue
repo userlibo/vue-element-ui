@@ -26,24 +26,24 @@
            }
         },
         methods:{
-         signin()
+         async signin()
          {
-           this.$http.post("/eshop/login",this.formdata).then(res=>{
-             // console.log(res)
-             console.log(res);
-             if(res.data=="0")
-             {
+          let res=await this.$http.post("/eshop/login",this.formdata)
+             console.log(res.data);
+             console.log("123")
+             if (res.data == "0") {
+               console.log("0")
                this.$message.success("欢迎进入！")
-               this.$router.push({name:"home"});
-             }else if(res.data=="1")
-             {
+               this.$router.push({name: "home"});
+             } else if (res.data == "1") {
+               console.log("1")
                this.$message.warning("用户名不存在!")
-             }else if(res.data=="2")
-             {
+             } else if (res.data == "2") {
+               console.log("2")
                this.$message.warning("密码错误!")
              }
 
-           })
+
          }
         }
     }
