@@ -3,13 +3,13 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-
-import ElementUI from "element-ui";
+import ElementUI from "element-ui"
 import "element-ui/lib/theme-chalk/index.css"
 Vue.use(ElementUI);
-
+import "@/assets/css/index.css"
 Vue.config.productionTip = false
-
+import myhttpserver from "@/plugins/http.js"
+Vue.use(myhttpserver);
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
