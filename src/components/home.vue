@@ -15,6 +15,7 @@
               default-active="1"
               :unique-opened="true"
               class="el-menu-vertical-demo"
+              router="true"
               @open="handleOpen"
               @close="handleClose">
               <el-submenu index="1">
@@ -23,8 +24,8 @@
                   <span>用户管理</span>
                 </template>
                 <el-menu-item-group>
-                  <el-menu-item index="1-1"><i class="el-icon-menu"></i>用户列表</el-menu-item>
-<!--                  <el-menu-item index="1-2"><i class="el-icon-menu"></i>选项2</el-menu-item>-->
+                  <el-menu-item index="/home/userlist"><i class="el-icon-menu"></i>用户列表</el-menu-item>
+
                 </el-menu-item-group>
               </el-submenu>
 
@@ -35,7 +36,7 @@
                 </template>
                 <el-menu-item-group>
                   <el-menu-item index="2-1"><i class="el-icon-menu"></i>角色列表</el-menu-item>
-                  <el-menu-item index="2-2"><i class="el-icon-menu"></i>权限列表</el-menu-item>
+                    <el-menu-item index="2-2"><i class="el-icon-menu"></i>权限列表</el-menu-item>
                 </el-menu-item-group>
               </el-submenu>
 
