@@ -6,7 +6,7 @@ const MyHttpServer={};
 
 MyHttpServer.install=function(Vue)
 {
-    axios.defaults.baseURL="http://libo2020.oicp.io"
+    axios.defaults.baseURL="http://libo2020.oicp.io/eshop/"
     Vue.prototype.$http=axios;
 }
 

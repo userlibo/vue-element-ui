@@ -28,7 +28,7 @@
         methods:{
          async signin()
          {
-          let res=await this.$http.post("/eshop/login",this.formdata)
+          let res=await this.$http.post("/login",this.formdata)
              console.log(res.data);
              console.log("123")
              if (res.data == "0") {
