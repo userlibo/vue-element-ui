@@ -2,11 +2,7 @@
 <!--  <h1>用户列表页</h1>-->
   <el-card class="box-card" >
     <!--    面包屑导航-->
-    <el-breadcrumb separator="/">
-      <el-breadcrumb-item :to="{ path: '/home' }">首页</el-breadcrumb-item>
-      <el-breadcrumb-item>用户管理</el-breadcrumb-item>
-      <el-breadcrumb-item>用户列表</el-breadcrumb-item>
-    </el-breadcrumb>
+   <crumbs :compath="compath"></crumbs>
     <!--    搜索-->
     <el-row >
       <el-col :span="8">
@@ -87,7 +83,7 @@
           </el-table-column>
         </el-table>
     <!--    分页-->
-        <!--      分页-->
+        <!--    分页-->
         <el-pagination
           @size-change="handleSizeChange"
           @current-change="handleCurrentChange"
@@ -147,7 +143,7 @@
         </el-form-item>
         <el-form-item label="角色" :label-width="formLabelWidth">
           <el-select @change="change_role_name" v-model="userroleform.role_name" placeholder="请选择活动区域">
-            <el-option selected="selected"  v-for="item in rolenamelist" :label="item.label" :value="item.rolename"></el-option>
+            <el-option selected="selected"  v-for="item in rolenamelist" :key="item.userid" :label="item.label" :value="item.rolename"></el-option>
           </el-select>
         </el-form-item>
       </el-form>
@@ -164,11 +160,17 @@
 </template>
 
 <script>
+    import crumbs from "../custom/crumbs";
     export default {
-        name: "userlist",
+      name: "userlist",
+      components:{crumbs},
       data:function()
       {
           return {
+            compath:{
+              subpath1:"用户管理",
+              subpath2:"用户列表",
+            },
             user_role_info:{
               userid:"",
               label:"",
