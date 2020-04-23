@@ -13,6 +13,13 @@ import myhttpserver from "@/plugins/http.js"
 Vue.use(myhttpserver);
 /* eslint-disable no-new */
 
+import TreeTableComponent from 'element-ui-tree-table'
+import 'element-ui-tree-table/dist/index.css'
+Vue.use(TreeTableComponent, {
+  prefix: 'i' // 可选
+})
+
+
 // Vue.filter("timefmt",function (data) {
 //   let d=new Date(data);
 //   let y=d.getFullYear();
@@ -28,6 +35,8 @@ Vue.filter("timefmt",(c)=>{
    return moment(c).format("YYYY-MM-DD");
 })
 
+import crumbs from "./components/custom/crumbs";
+Vue.component("crumbs",crumbs);
 
 new Vue({
   el: '#app',
