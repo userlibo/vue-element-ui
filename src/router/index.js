@@ -9,6 +9,7 @@ import classificy_arguments from "../components/goods/classificy_arguments";
 import goods_category from "../components/goods/goods_category";
 import goods_list from "../components/goods/goods_list";
 import goods_add from "../components/goods/goods_add";
+import order from "../components/order/order";
 Vue.use(Router)
 
 export default new Router({
@@ -33,7 +34,8 @@ export default new Router({
         {path:"classificy_arguments",name:"classificy_arguments",component:classificy_arguments},
         {path:"goods_category",name:"goods_category",component:goods_category},
         {path:"goods_manager",name:"goods_list",component:goods_list},
-        {path:"goods_add",name:"goods_add",component:goods_add}
+        {path:"goods_add",name:"goods_add",component:goods_add},
+        {path:"orderlist",name:"orderlist",component:order}
       ]
     },
     {
