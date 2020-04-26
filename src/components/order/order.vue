@@ -101,6 +101,10 @@
          </template>
        </el-table-column>
        <el-table-column
+         prop="order_ctime"
+         label="创建时间">
+       </el-table-column>
+       <el-table-column
          label="操作">
          <template slot-scope="scope">
          <el-button @click="showmodifydialog(scope.row)" size="mini" plain type="success" icon="el-icon-check" circle></el-button>

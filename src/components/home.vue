@@ -69,7 +69,7 @@
                   <span>数据统计</span>
                 </template>
                 <el-menu-item-group>
-                  <el-menu-item index="5-1"><i class="el-icon-menu"></i>数据报表</el-menu-item>
+                  <el-menu-item index="/home/report"><i class="el-icon-menu"></i>数据报表</el-menu-item>
 <!--                  <el-menu-item index="1-2"><i class="el-icon-menu"></i>选项2</el-menu-item>-->
                 </el-menu-item-group>
               </el-submenu>

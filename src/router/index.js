@@ -10,6 +10,7 @@ import goods_category from "../components/goods/goods_category";
 import goods_list from "../components/goods/goods_list";
 import goods_add from "../components/goods/goods_add";
 import order from "../components/order/order";
+import report from "../components/report/report";
 Vue.use(Router)
 
 export default new Router({
@@ -35,7 +36,8 @@ export default new Router({
         {path:"goods_category",name:"goods_category",component:goods_category},
         {path:"goods_manager",name:"goods_list",component:goods_list},
         {path:"goods_add",name:"goods_add",component:goods_add},
-        {path:"orderlist",name:"orderlist",component:order}
+        {path:"orderlist",name:"orderlist",component:order},
+        {path:"report",name:"report",component:report}
       ]
     },
     {
